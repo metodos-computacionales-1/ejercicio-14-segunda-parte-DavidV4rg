@@ -43,11 +43,11 @@ void rungekutta4(double t, double h, double & y0, double & y1)
 int main(void)
 {
   ofstream outfile;
-  outfile.open("data.dat");
+  outfile.open("RungeKutta.dat");
   double x, v, time;
   x = 1;
   v = 0;
-  for(time = 0; time <= 20; time += DeltaT) {
+  for(time = 0; time < 20; time += DeltaT) {
     outfile<< time << "\t" << x << "\t" << v << endl;
     rungekutta4(time, DeltaT, x, v);
     
